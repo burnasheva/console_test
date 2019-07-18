@@ -13,11 +13,15 @@ namespace ConsoleTest
             Console.WriteLine("http://user:123456@jetbrains.com");
             
             Console.WriteLine("All Environment Variables:");
-            foreach(DictionaryEntry e in System.Environment.GetEnvironmentVariables())
+            foreach(DictionaryEntry e in Environment.GetEnvironmentVariables())
             {
                 Console.WriteLine(e.Key  + ":" + e.Value);
                 
             }
+
+            Console.WriteLine("`system.myVar` value = " + Environment.GetEnvironmentVariable("system.myVar"));
+            Console.WriteLine("Выводим русские символы");
+
         }
     }
 }
